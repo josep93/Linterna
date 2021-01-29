@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Input/Inputs.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Input/PlayerInputs.inputactions'
 
 using System;
 using System.Collections;
@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @Inputs : IInputActionCollection, IDisposable
+public class @PlayerInputs : IInputActionCollection, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @Inputs()
+    public @PlayerInputs()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""Inputs"",
+    ""name"": ""PlayerInputs"",
     ""maps"": [
         {
             ""name"": ""Player"",
@@ -22,6 +22,14 @@ public class @Inputs : IInputActionCollection, IDisposable
                     ""name"": ""Accion"",
                     ""type"": ""Button"",
                     ""id"": ""38795491-42aa-4b8c-b531-749428c53166"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""Button"",
+                    ""id"": ""493f354f-3bc8-469b-ac06-88f1ece31953"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -38,6 +46,17 @@ public class @Inputs : IInputActionCollection, IDisposable
                     ""action"": ""Accion"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""da0b2ab7-4d0b-49b0-bc19-7b51a880e6bd"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MousePosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -47,6 +66,7 @@ public class @Inputs : IInputActionCollection, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Accion = m_Player.FindAction("Accion", throwIfNotFound: true);
+        m_Player_MousePosition = m_Player.FindAction("MousePosition", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -97,11 +117,13 @@ public class @Inputs : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Accion;
+    private readonly InputAction m_Player_MousePosition;
     public struct PlayerActions
     {
-        private @Inputs m_Wrapper;
-        public PlayerActions(@Inputs wrapper) { m_Wrapper = wrapper; }
+        private @PlayerInputs m_Wrapper;
+        public PlayerActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Accion => m_Wrapper.m_Player_Accion;
+        public InputAction @MousePosition => m_Wrapper.m_Player_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -114,6 +136,9 @@ public class @Inputs : IInputActionCollection, IDisposable
                 @Accion.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAccion;
                 @Accion.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAccion;
                 @Accion.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAccion;
+                @MousePosition.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePosition;
+                @MousePosition.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePosition;
+                @MousePosition.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePosition;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -121,6 +146,9 @@ public class @Inputs : IInputActionCollection, IDisposable
                 @Accion.started += instance.OnAccion;
                 @Accion.performed += instance.OnAccion;
                 @Accion.canceled += instance.OnAccion;
+                @MousePosition.started += instance.OnMousePosition;
+                @MousePosition.performed += instance.OnMousePosition;
+                @MousePosition.canceled += instance.OnMousePosition;
             }
         }
     }
@@ -128,5 +156,6 @@ public class @Inputs : IInputActionCollection, IDisposable
     public interface IPlayerActions
     {
         void OnAccion(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
     }
 }
