@@ -1550,8 +1550,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384.81, y: -222.61}
-  m_SizeDelta: {x: 160, y: 61.222084}
+  m_AnchoredPosition: {x: 362, y: -222.61}
+  m_SizeDelta: {x: 175.99997, y: 61.223137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775850913
 MonoBehaviour:
@@ -1586,7 +1586,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Jos\xE9 Luis G\xF3mez Mi\xF1o\nJes\xFAs Pinto S\xE1ez\nMiguel Heredia
+  m_Text: "Jos\xE9 Luis G\xF3mez Mi\xF1o\nJes\xFAs Miguel Pinto S\xE1ez\nMiguel Heredia
     Fern\xE1ndez"
 --- !u!222 &1775850914
 CanvasRenderer:
