@@ -14,7 +14,8 @@ public class GoalTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log(other);
-            SceneManager.LoadScene(escenarioSiguiente);
+            //SceneManager.LoadScene(escenarioSiguiente);
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex) + 1);
         }
     }
 }
