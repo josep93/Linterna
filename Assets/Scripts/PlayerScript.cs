@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static InGameValues;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -13,10 +14,15 @@ public class PlayerScript : MonoBehaviour
     private double deadzone = 0.2;
     private Rigidbody rigidbody;
 
+
+    private bool menuPressed;
+    private bool menuWasPressed;
+
     // Update is called once per frame
 
     private void Start()
     {
+        ButtonInitialStatus();
         controls = new PlayerInputs();
         controls.Player.Enable();
         rigidbody = GetComponent<Rigidbody>();
@@ -25,12 +31,51 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        AimTorch();
-        Move();
+        ButtonStatusUpdate();
+        Menu();
+        if (!paused){
+            AimTorch();
+            Move();
+        }
         ZeroVelocity();
     }
 
-    private void Move()
+    private void Menu()
+    {
+        if (menuPressed && !menuWasPressed)
+        {
+            GameEvents.current.PressPause();
+        }
+    }
+
+    private void LateUpdate()
+    {
+        ButtonStatusLateUpdate();
+    }
+
+    private void ButtonInitialStatus()
+    {
+        menuPressed = false;
+    }
+
+    private void ButtonStatusUpdate()
+    {
+        if (controls.Player.Pause.ReadValue<float>() == 1)
+        {
+            menuPressed = true;
+        }
+        else
+        {
+            menuPressed = false;
+        }
+    }
+
+    private void ButtonStatusLateUpdate()
+    {
+        menuWasPressed = menuPressed;
+    }
+
+        private void Move()
     {
         var movement = controls.Player.Move.ReadValue<Vector2>();
         if (movement.magnitude >= deadzone || movement.magnitude <= -deadzone)
