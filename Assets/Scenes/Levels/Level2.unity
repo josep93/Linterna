@@ -4397,7 +4397,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656196584}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -5222,7 +5222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animador: {fileID: 2025195300}
-  collider: {fileID: 2025195304}
+  boxCollider: {fileID: 2025195304}
 --- !u!65 &2025195304
 BoxCollider:
   m_ObjectHideFlags: 0
