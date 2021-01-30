@@ -7,6 +7,8 @@ public class PlayerScript : MonoBehaviour
 {
     [SerializeField]
     private GameObject player;
+    [SerializeField]
+    private BoxCollider collider;
     public Camera camera;
     private PlayerInputs controls;
     public float movementSpeed;
@@ -17,6 +19,8 @@ public class PlayerScript : MonoBehaviour
 
     private bool menuPressed;
     private bool menuWasPressed;
+    private bool actionPressed;
+    private bool actionWasPressed;
 
     // Update is called once per frame
 
@@ -36,6 +40,7 @@ public class PlayerScript : MonoBehaviour
         if (!paused){
             AimTorch();
             Move();
+            Action();
         }
         ZeroVelocity();
     }
@@ -56,6 +61,7 @@ public class PlayerScript : MonoBehaviour
     private void ButtonInitialStatus()
     {
         menuPressed = false;
+        actionPressed = false;
     }
 
     private void ButtonStatusUpdate()
@@ -68,19 +74,37 @@ public class PlayerScript : MonoBehaviour
         {
             menuPressed = false;
         }
+        if (controls.Player.Action.ReadValue<float>() == 1)
+        {
+            actionPressed = true;
+        }
+        else
+        {
+            actionPressed = false;
+        }
     }
 
     private void ButtonStatusLateUpdate()
     {
         menuWasPressed = menuPressed;
+        actionWasPressed = actionPressed;
     }
 
-        private void Move()
+    private void Move()
     {
         var movement = controls.Player.Move.ReadValue<Vector2>();
         if (movement.magnitude >= deadzone || movement.magnitude <= -deadzone)
         {
             transform.Translate(new Vector3(movement.x, 0, movement.y) * Time.deltaTime * movementSpeed);
+        }
+    }
+
+    private void Action()
+    {
+        if (actionPressed && !actionWasPressed)
+        {
+            collider.enabled = true;
+            StartCoroutine(DeactivateCollider(collider));
         }
     }
 
@@ -97,5 +121,11 @@ public class PlayerScript : MonoBehaviour
         aimVecWorld = (Vector3)aimVecWorld - player.transform.position;
         var aimAngle = Mathf.Atan2(aimVecWorld.x, aimVecWorld.z) * 180 / Mathf.PI;
         player.transform.eulerAngles = new Vector3(player.transform.rotation.eulerAngles.x,aimAngle, player.transform.rotation.eulerAngles.z);
+    }
+
+    IEnumerator DeactivateCollider(BoxCollider collider)
+    {
+        yield return new WaitForFixedUpdate();
+        collider.enabled = false;
     }
 }
