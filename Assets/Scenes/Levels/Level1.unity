@@ -1048,6 +1048,11 @@ PrefabInstance:
       propertyPath: m_DynamicOccludee
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1845180368894954364, guid: b348861890cc4f9428e4ed53a04f175a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6855562bfe012949a91f52a94df7af5, type: 2}
     - target: {fileID: 919132149155446097, guid: b348861890cc4f9428e4ed53a04f175a,
         type: 3}
       propertyPath: m_Name
@@ -1058,6 +1063,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3017538745114851400, guid: b348861890cc4f9428e4ed53a04f175a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cc8429aa3a7bc34492f3e4760d8a525, type: 2}
     - target: {fileID: 3339133379227402911, guid: b348861890cc4f9428e4ed53a04f175a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
