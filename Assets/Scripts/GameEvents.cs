@@ -6,16 +6,17 @@ using static InGameValues;
 
 public class GameEvents : MonoBehaviour
 {
-
     public static GameEvents current;
 
     private void Awake()
     {
         current = this;
         PausePressed = Prueba;
+        DestroyDoor = VoidMethod;
     }
 
     public event Action<bool> PausePressed;
+    public event Action DestroyDoor;
     public void PressPause()
     {
         paused = !paused;
@@ -34,4 +35,15 @@ public class GameEvents : MonoBehaviour
     {
         Debug.Log(prueba==true?"pausa":"continue");
     }
+
+    public void VoidMethod()
+    {
+        Debug.Log("");
+    }
+
+    public void DestroyDoorMethod()
+    {
+        DestroyDoor();
+    }
+
 }
