@@ -804,6 +804,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 --- !u!4 &211179946 stripped
 Transform:
@@ -866,6 +867,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bridgeCollider: {fileID: 812089996}
+=======
+>>>>>>> parent of 847685d... scene 3
 =======
 >>>>>>> parent of 847685d... scene 3
 =======
@@ -1086,6 +1089,7 @@ MeshFilter:
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &340836747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1234,6 +1238,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 340836747}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 847685d... scene 3
 =======
 >>>>>>> parent of 847685d... scene 3
 =======
@@ -3273,6 +3279,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 576a91a6dfa68134db280ed732e6e755, type: 3}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1475005626
 =======
     - target: {fileID: -7511558181221131132, guid: db530d6214700954c85f102068e456c7,
@@ -3514,6 +3521,8 @@ PrefabInstance:
 >>>>>>> parent of 847685d... scene 3
 =======
 >>>>>>> parent of 847685d... scene 3
+=======
+>>>>>>> parent of 847685d... scene 3
 --- !u!1 &1492677321
 GameObject:
   m_ObjectHideFlags: 0
@@ -3569,6 +3578,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!65 &1492677324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3613,6 +3623,8 @@ MeshCollider:
   serializedVersion: 2
   m_Size: {x: 7.2457466, y: 1, z: 7.368721}
   m_Center: {x: -23.077204, y: 0, z: -13.2947235}
+=======
+>>>>>>> parent of 847685d... scene 3
 =======
 >>>>>>> parent of 847685d... scene 3
 =======
@@ -3821,6 +3833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed9e5905b8c5a54418d0c5f6d7ee7d03, type: 3}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &1664766263
@@ -4132,6 +4145,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5049d25fca03ca64cba7bbdc8b646c2e, type: 3}
+=======
+>>>>>>> parent of 847685d... scene 3
 =======
 >>>>>>> parent of 847685d... scene 3
 =======
@@ -5453,12 +5468,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d6855562bfe012949a91f52a94df7af5, type: 2}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     - target: {fileID: -7511558181221131132, guid: 1b87384ddf6bc8e4d8b207e1737e8ae5,
         type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of 847685d... scene 3
 =======
 >>>>>>> parent of 847685d... scene 3
 =======
@@ -5594,12 +5612,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     - target: {fileID: -7511558181221131132, guid: ea6ed48189c158b47acb3873c016eb68,
         type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of 847685d... scene 3
 =======
 >>>>>>> parent of 847685d... scene 3
 =======
@@ -5740,6 +5761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     - target: {fileID: 3582858122886348325, guid: c4834e7e16f13ef4db1c4afa9c0f99d7,
         type: 3}
@@ -5753,6 +5775,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2475897277140492217, guid: c4834e7e16f13ef4db1c4afa9c0f99d7, type: 3}
+=======
+    m_RemovedComponents: []
+>>>>>>> parent of 847685d... scene 3
 =======
     m_RemovedComponents: []
 >>>>>>> parent of 847685d... scene 3
