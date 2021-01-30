@@ -2,6 +2,9 @@
 
 public class DoorButtonScript : MonoBehaviour
 {
+    public BoxCollider collider;
+    public Animator animador;
+
     void Start()
     {
         GameEvents.current.DestroyDoor += DestroySelf;
@@ -9,8 +12,9 @@ public class DoorButtonScript : MonoBehaviour
 
     public void DestroySelf()
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
         GameEvents.current.DestroyDoor -= DestroySelf;
-        Debug.Log("Se ha destruido la puerta");
+        collider.enabled = false;
+        animador.Play("AbrirPuerta");
     }
 }
