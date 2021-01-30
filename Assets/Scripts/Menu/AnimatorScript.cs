@@ -5,8 +5,8 @@ public class AnimatorScript : MonoBehaviour
 {
     public Animator animacion;
     private Coroutine corrutina;
-    private int aux = 1;
-    private int temporizador = 4;
+    private int aux = 2;
+    private int temporizador = 2;
 
     private void Start()
     {

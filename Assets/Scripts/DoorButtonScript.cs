@@ -2,6 +2,7 @@
 
 public class DoorButtonScript : MonoBehaviour
 {
+
     void Start()
     {
         GameEvents.current.DestroyDoor += DestroySelf;
@@ -11,6 +12,5 @@ public class DoorButtonScript : MonoBehaviour
     {
         Destroy(this.gameObject);
         GameEvents.current.DestroyDoor -= DestroySelf;
-        Debug.Log("Se ha destruido la puerta");
     }
 }
