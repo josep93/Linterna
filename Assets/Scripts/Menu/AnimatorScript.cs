@@ -22,11 +22,10 @@ public class AnimatorScript : MonoBehaviour
     IEnumerator lanzarAnimacion()
     {
         yield return new WaitForSeconds(temporizador);
-
+        temporizador = 15;
         switch (aux)
         {
             case 1:
-                temporizador = 15;
                 animacion.Play("LightTitle" + aux);
                 corrutina = StartCoroutine("lanzarAnimacion");
 
@@ -34,7 +33,6 @@ public class AnimatorScript : MonoBehaviour
                 break;
 
             case 2:
-                temporizador = 15;
                 animacion.Play("LightTitle" + aux);
                 corrutina = StartCoroutine("lanzarAnimacion");
 
