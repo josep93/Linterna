@@ -23,6 +23,11 @@ public class MenuScript : MonoBehaviour
 
     public void jugar()
     {
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex) + 1);
+    }
+
+    public void lab()
+    {
         SceneManager.LoadScene("New Scene");
     }
 
