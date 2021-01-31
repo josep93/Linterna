@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PointLightEvent : MonoBehaviour
+public class RoofEvent : MonoBehaviour
 {
     MeshRenderer meshRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        meshRenderer = GetComponentInChildren<MeshRenderer>();
-        GameEvents.current.StartCinematic += TurnOnLights;
+        meshRenderer = GetComponent<MeshRenderer>();
+        GameEvents.current.StartCinematic += TurnOnRoof;
     }
 
-    public void TurnOnLights()
+    public void TurnOnRoof()
     {
         meshRenderer.enabled = true;
     }

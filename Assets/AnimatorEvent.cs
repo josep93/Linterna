@@ -16,5 +16,6 @@ public class AnimatorEvent : MonoBehaviour
     public void StartAnimator()
     {
         animator.enabled = true;
+        animator.SetTrigger("InitiateCutscene");
     }
 }
