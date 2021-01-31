@@ -22,5 +22,6 @@ public class FadeToBlackEvent : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         meshRenderer.enabled = true;
+        MusicScript.stopMusic();
     }
 }
