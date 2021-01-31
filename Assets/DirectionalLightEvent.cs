@@ -20,7 +20,7 @@ public class DirectionalLightEvent : MonoBehaviour
 
     public IEnumerator TurnOnLightsIEnumerator()
     {
-        yield return new WaitForSeconds(1.6f);
+        yield return new WaitForSeconds(1.8f);
         light.enabled = true;
     }
 }
