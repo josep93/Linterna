@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class DirectionalLightEvent : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Light light;
+
     void Start()
     {
+        light = GetComponent<Light>();
         GameEvents.current.StartCinematic += TurnOnLights;
-        this.gameObject.SetActive(false);
+        light.enabled = false;
     }
 
     public void TurnOnLights()
     {
-        this.gameObject.SetActive(true);
+        StartCoroutine(TurnOnLightsIEnumerator());
+    }
+
+    public IEnumerator TurnOnLightsIEnumerator()
+    {
+        yield return new WaitForSeconds(1.6f);
+        light.enabled = true;
     }
 }

@@ -15,6 +15,20 @@ public class PointLightEvent : MonoBehaviour
 
     public void TurnOnLights()
     {
+        StartCoroutine(TurnOnLightsIEnumerator());
+    }
+
+    public IEnumerator TurnOnLightsIEnumerator()
+    {
+        yield return new WaitForSeconds(1f);
+        meshRenderer.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        meshRenderer.enabled = false;
+        yield return new WaitForSeconds(0.2f);
+        meshRenderer.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        meshRenderer.enabled = false;
+        yield return new WaitForSeconds(0.2f);
         meshRenderer.enabled = true;
     }
 }
