@@ -4,6 +4,7 @@ public class DoorTrigger : MonoBehaviour
 {
     public Animator animador;
     public BoxCollider boxCollider;
+    public GameObject candado;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -11,6 +12,7 @@ public class DoorTrigger : MonoBehaviour
         {
             //Destroy(this.gameObject);
             boxCollider.enabled = false;
+            candado.SetActive(false);
             animador.Play("AbrirPuerta");
             InGameValues.haveKey = false;
         }
