@@ -13,9 +13,11 @@ public class GameEvents : MonoBehaviour
         current = this;
         PausePressed = Prueba;
         DestroyDoor = VoidMethod;
+        StartCinematic = StartingCinematic;
     }
 
     public event Action<bool> PausePressed;
+    public event Action StartCinematic;
     public event Action DestroyDoor;
     public void PressPause()
     {
@@ -41,9 +43,19 @@ public class GameEvents : MonoBehaviour
         Debug.Log("");
     }
 
+    public void StartingCinematic()
+    {
+        Debug.Log("Starting Cinematic");
+    }
+
     public void DestroyDoorMethod()
     {
         DestroyDoor();
+    }
+
+    public void StartCinematicMethod()
+    {
+        StartCinematic();
     }
 
 }
