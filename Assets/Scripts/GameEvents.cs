@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static InGameValues;
 
 public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
+
+    public object SceneManage { get; private set; }
 
     private void Awake()
     {
@@ -56,6 +58,12 @@ public class GameEvents : MonoBehaviour
     public void StartCinematicMethod()
     {
         StartCinematic();
+        StartCoroutine(BackToMenu());
+    }
+
+    public IEnumerator BackToMenu(){
+        yield return new WaitForSeconds(6);
+        SceneManager.LoadScene(0);
     }
 
 }
