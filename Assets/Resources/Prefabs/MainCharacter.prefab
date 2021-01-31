@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1787559786}
   m_Layer: 0
   m_Name: ActionTrigger
-  m_TagString: Untagged
+  m_TagString: PlayerTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,9 +58,9 @@ BoxCollider:
   m_GameObject: {fileID: 1698435918}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1787559786
 MonoBehaviour:
@@ -375,6 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8097971329575307097}
+  collider: {fileID: 1698435920}
   camera: {fileID: 8097971327694566290}
   movementSpeed: 3
 --- !u!136 &8097971329665754398
